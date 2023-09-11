@@ -1,0 +1,131 @@
+{
+    "openapi": "3.0.0",
+    "info": {
+      "title": "API Documentation",
+      "version": "1.0.0",
+      "description": "Documentación API Cinepelis"
+    },
+    "servers": [
+      {
+        "url": "http://localhost:3001",
+        "description": "Servidor de desarrollo"
+      }
+    ],
+    "paths": {
+      "/movies": {
+        "get": {
+          "summary": "Obtener todas las peliculas",
+          "responses": {
+            "200": {
+              "description": "Successful operation",
+              "content": {
+                "application/json": {
+                  "schema": {
+                    "type": "array",
+                    "items": {
+                      "$ref": "#/components/schemas/Movie"
+                    }
+                  }
+                }
+              }
+            },
+            "500": {
+              "description": "Internal server error"
+            }
+          }
+        },
+        "post": {
+          "summary": "Crea una nueva pelicula",
+          "requestBody": {
+            "description": "Objeto movie",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/postMovie"
+                }
+              }
+            }
+          },
+          "responses": {
+            "201": {
+              "description": "Pelicula creada"
+            },
+            "500": {
+              "description": "Error correspondiente"
+            }
+          }
+        }
+      }
+    },
+    "components": {
+      "schemas": {
+        "movie": {
+          "type": "object",
+          "properties": {
+            "id": {
+              "type": "string"
+            },
+            "titulo": {
+              "type": "string"
+            },
+            "descripcion": {
+              "type": "string"
+            },
+            "portada": {
+              "type": "string"
+            },
+            "trailer": {
+              "type": "string"
+            },
+            "clasificacion": {
+              "type": "string"
+            },
+            "genero": {
+              "type": "string"
+            },
+            "duracion": {
+              "type": "string"
+            },
+            "elenco": {
+              "type": "string"
+            },
+            "director": {
+              "type": "string"
+            }
+          }
+        },
+        "postMovie": {
+          "type": "object",
+          "properties": {
+            "titulo": {
+              "type": "string"
+            },
+            "descripcion": {
+              "type": "string"
+            },
+            "portada": {
+              "type": "string"
+            },
+            "trailer": {
+              "type": "string"
+            },
+            "clasificacion": {
+              "type": "string"
+            },
+            "genero": {
+              "type": "string"
+            },
+            "duracion": {
+              "type": "string"
+            },
+            "elenco": {
+              "type": "string"
+            },
+            "director": {
+              "type": "string"
+            }
+          }
+        }
+      }
+    }
+}
