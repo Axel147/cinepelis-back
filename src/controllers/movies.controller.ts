@@ -31,10 +31,14 @@ export class MovieController {
             movie.director = director
 
             await movieRepository.create(movie);
-            return res.status(201).send("Pelicula creada");
+            return res.status(201).json({"respuesta": "pelicula creada"});
         } catch (error) {
             return res.status(500).json(error);
         }
+    }
+
+    static pruebaBack = async (req: Request, res: Response) => {
+        console.log("funciono el llamado a back")
     }
 
     static updateMovie = async (req: Request, res: Response) => {
