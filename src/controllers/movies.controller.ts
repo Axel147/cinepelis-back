@@ -37,10 +37,6 @@ export class MovieController {
         }
     }
 
-    static pruebaBack = async (req: Request, res: Response) => {
-        console.log("funciono el llamado a back")
-    }
-
     static updateMovie = async (req: Request, res: Response) => {
         
     }
