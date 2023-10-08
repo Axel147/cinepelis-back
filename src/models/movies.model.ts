@@ -1,4 +1,4 @@
-import mongoose, { Schema} from 'mongoose';
+import mongoose, { Schema } from 'mongoose';
 import { IMovie } from '../interfaces/movies.interface';
 
 const MovieSchema: Schema = new Schema({
@@ -11,7 +11,6 @@ const MovieSchema: Schema = new Schema({
   duracion: { type: String, required: false },
   elenco: { type: String, required: false },
   director: { type: String, required: false },
-
 });
 
 export const Movie = mongoose.model<IMovie>('Movie', MovieSchema);

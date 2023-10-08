@@ -9,7 +9,7 @@ export class MovieController {
         const movieRepository = new MovieRepository(Movie);
         try {
             const movies = await movieRepository.findAll(); 
-            res.status(200).json(movies)
+            res.status(200).json(movies);
         } catch (error) {
             res.status(500).json({message: error});
         }
