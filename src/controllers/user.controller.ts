@@ -24,7 +24,6 @@ export class UserController {
 
     /*const usuariosFiltrados = this.getAll().filter((usuario))*/
 
-
   }
 
   static createUser = async (req: Request, res: Response) => {
