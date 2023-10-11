@@ -44,7 +44,7 @@ const routes = Router();
  *               type: string,
  *               description: Link del video promocional
  *             },
- *             clasificacion:{
+ *             clasificacion: {
  *               type: string,
  *               description: +15
  *             },
