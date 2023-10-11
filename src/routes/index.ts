@@ -78,8 +78,11 @@ routes.use("/movies", movie);
 
 /**
  * @swagger
+ * tags: User
  * /user:
  *   get:
+ *    tags: [User]
+ *    summary: un texto para un usuario
  *    description: Trae todos los usuarios registrados
  *    responses:
  *     '200':
