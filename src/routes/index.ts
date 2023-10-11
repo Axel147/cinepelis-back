@@ -28,6 +28,25 @@ routes.use("/movies", movie);
  *     '200':
  *       description: Usuario obtenido correctamente
  */
+
+/**
+ * @swagger
+ * /user:
+ *   post:
+ *     description:
+ *     produces:
+ *       - application/json
+ *     parameters:
+ *       - name: "body"
+ *         in: body
+ *         required: true
+ *     responses:
+ *       '200': 
+ *         description: Usuario creado correctamente
+ *         content:
+ *           application/json:
+ *           type: object
+ */
 routes.use("/user", user);
 
 export default routes;
