@@ -3,11 +3,13 @@ import movie from "./movies.routes";
 import user from "./user.routes";
 
 const routes = Router();
+
 //---------------MOVIES-----------------------------------
 /**
 * @swagger
 * /movies:
 *   get:
+*    tags: [Movies]
 *    description: Trae todas las peliculas registradas
 *    responses:
 *     '200':
@@ -18,6 +20,7 @@ const routes = Router();
  * @swagger
  * /movies:
  *   post:
+ *     tags: [Movies]
  *     description: Registrar una pelicula
  *     produces:
  *       - application/json
@@ -82,7 +85,7 @@ routes.use("/movies", movie);
  * /user:
  *   get:
  *    tags: [User]
- *    summary: un texto para un usuario
+ *    summary: Trae todos los usuarios
  *    description: Trae todos los usuarios registrados
  *    responses:
  *     '200':
@@ -93,6 +96,8 @@ routes.use("/movies", movie);
  * @swagger
  * /user/{email}:
  *   get:
+ *    tags: [User]
+ *    summary: Trae un usuario por email
  *    description: Trae un usuario por email
  *    parameters:
  *     - in: path
@@ -106,6 +111,8 @@ routes.use("/movies", movie);
  * @swagger
  * /user:
  *   post:
+ *     tags: [User]
+ *     summary: Registra un usuario
  *     description:
  *     produces:
  *       - application/json
