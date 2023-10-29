@@ -15,14 +15,20 @@ export class UserController {
     }
   };
 
-  static userByEmail = async (req: Request, res: Response) => {
-    const { email } = req.body;
+  static getUserByEmail = async (req: Request, res: Response) => {
+    const { email } = req.params;
+    const userRepository = new UserRepository(User);
 
-    if(!email){
-        return res.status(400).json({message: 'Debes proporcionar un email'});
+    try{
+      const user = await userRepository.findByEmail(email);
+      if(user.email == email){
+        return res.status(200).json(user);
+      } else {
+        return res.status(404).json({msg: "Este usuario no está registrado"});
+      }
+    } catch(error){
+      return res.status(400).json(error);
     }
-
-    /*const usuariosFiltrados = this.getAll().filter((usuario))*/
 
   }
 

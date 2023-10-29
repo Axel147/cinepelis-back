@@ -106,6 +106,8 @@ routes.use("/movies", movie);
  *    responses:
  *     '200':
  *       description: Usuario obtenido correctamente
+ *     '404':
+ *       description: Usuario no encontrado
  */
 
 /**

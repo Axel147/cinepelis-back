@@ -15,4 +15,8 @@ export class UserRepository{
     async update(id: string, user: Partial<IUser>): Promise<IUser | null>{
         return this.userModel.findByIdAndUpdate(id, user, {new: true}).exec();
     }
+
+    async findByEmail(email: string):Promise<IUser>{
+        return this.userModel.findOne({email});
+    }
 }
