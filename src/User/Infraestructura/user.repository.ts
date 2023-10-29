@@ -17,6 +17,6 @@ export class UserRepository{
     }
 
     async findByEmail(email: string):Promise<IUser>{
-        return this.userModel.findOne({email});
+        return this.userModel.findOne({email}).exec();
     }
 }

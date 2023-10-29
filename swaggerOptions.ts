@@ -10,6 +10,6 @@ export const swaggerOptions = {
         servers: ["http://localhost:3001"]
       },
     },
-    apis: ['./src/routes/*.ts'],
+    apis: ['./src/indexRoutes.ts'],
     
 }
