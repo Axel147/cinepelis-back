@@ -1,7 +1,7 @@
 import { Request, Response } from "express";
 //import Movie from "../entity/Movie";
-import { Movie } from "../models/movies.model"
-import { MovieRepository } from "../repositories/movies.repository";
+import { Movie } from "../Dominio/movies.model"
+import { MovieRepository } from "./movies.repository";
 
 export class MovieController {
 

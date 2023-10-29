@@ -1,5 +1,5 @@
 import mongoose, { Schema } from 'mongoose';
-import { IMovie } from '../interfaces/movies.interface';
+import { IMovie } from './movies.interface';
 
 const MovieSchema: Schema = new Schema({
   titulo: { type: String, required: true },

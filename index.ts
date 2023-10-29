@@ -1,6 +1,6 @@
 import express from "express";
 import bodyParser from "body-parser";
-import routes from "./src/routes/index";
+import routes from "./src/indexRoutes";
 import { PORT, MONGODB_URI } from "./src/config";
 import {swaggerOptions} from './swaggerOptions';
 

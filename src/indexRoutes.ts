@@ -1,6 +1,6 @@
 import { Router } from "express";
-import movie from "./movies.routes";
-import user from "./user.routes";
+import movie from "./Movies/Infraestructura/movies.routes";
+import user from "./User/Infraestructura/user.routes";
 
 const routes = Router();
 
@@ -77,6 +77,7 @@ const routes = Router();
  */
 
 routes.use("/movies", movie);
+
 //-------------USER----------------------------
 
 /**

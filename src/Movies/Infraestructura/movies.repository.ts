@@ -1,5 +1,5 @@
 import { Model } from 'mongoose';
-import { IMovie } from "../interfaces/movies.interface"
+import { IMovie } from "../Dominio/movies.interface"
 
 export class MovieRepository {
   constructor(private readonly movieModel: Model<IMovie>) {}

@@ -1,5 +1,5 @@
 import { Model } from 'mongoose';
-import { IUser } from '../interfaces/user.interface';
+import { IUser } from '../Dominio/user.interface';
 
 export class UserRepository{
     constructor(private readonly userModel: Model<IUser>){}

@@ -1,6 +1,6 @@
 import { Request, Response } from "express";
-import { User } from "../models/user.model";
-import { UserRepository } from "../repositories/user.repository";
+import { User } from "../Dominio/user.model";
+import { UserRepository } from "./user.repository";
 
 const bcrypt = require('bcrypt');
 
