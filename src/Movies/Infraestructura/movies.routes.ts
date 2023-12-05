@@ -5,6 +5,8 @@ const router = Router();
 
 router.get("/", MovieController.getAll);
 
+//router.get("/:title", MovieController.getByTitle);
+
 router.post("/", MovieController.addMovie);
 
 export default router;

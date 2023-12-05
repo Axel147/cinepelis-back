@@ -9,6 +9,10 @@ export class MovieRepository {
     return this.movieModel.findById(id).exec();
   }
 
+  async findByTitle(title: string): Promise<IMovie | null> {
+    return ; //this.movieModel.findOne(title);
+  }
+
   async findAll(): Promise<IMovie[]> {
     return this.movieModel.find().exec();
   }

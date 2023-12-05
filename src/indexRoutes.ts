@@ -1,4 +1,5 @@
 import { Router } from "express";
+import combo from "./Combos/Infraestructura/combo.routes"
 import movie from "./Movies/Infraestructura/movies.routes";
 import user from "./User/Infraestructura/user.routes";
 
@@ -15,6 +16,8 @@ const routes = Router();
 *     '200':
 *       description: Ok
 */
+
+routes.use("/combos", combo);
 
 /**
  * @swagger
