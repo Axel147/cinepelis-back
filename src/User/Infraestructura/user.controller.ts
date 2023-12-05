@@ -27,6 +27,7 @@ export class UserController {
         return res.status(404).json({msg: "Este usuario no está registrado"});
       }
     } catch(error){
+      console.log(error);
       return res.status(400).json(error);
     }
 
