@@ -5,6 +5,7 @@ import { UserRepository } from "./user.repository";
 const bcrypt = require('bcrypt');
 
 export class UserController {
+
   static getAll = async (req: Request, res: Response) => {
     const userRepository = new UserRepository(User);
     try {
@@ -72,5 +73,7 @@ export class UserController {
     }
   };
 
-  static updateUser = async (req: Request, res: Response) => {}
+  static updateUser = async (email, body) => {
+    let user = await usuario.findOneAndUpdate
+  }
 }

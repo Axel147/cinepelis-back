@@ -20,3 +20,4 @@ export class UserRepository{
         return this.userModel.findOne({email}).exec();
     }
 }
+
