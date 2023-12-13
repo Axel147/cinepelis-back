@@ -72,8 +72,10 @@ export class UserController {
         return res.status(500).json(error);
     }
   };
-
+  
+  /*
   static updateUser = async (email, body) => {
     let user = await usuario.findOneAndUpdate
   }
+  */
 }
