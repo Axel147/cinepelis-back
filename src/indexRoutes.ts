@@ -1,6 +1,7 @@
 import { Router } from "express";
-import combo from "./Combos/Infraestructura/combo.routes"
+import candy from "./Candy/Infraestructura/candy.routes"
 import movie from "./Movies/Infraestructura/movies.routes";
+import store from "./Store/Infraestructura/store.routes"
 import user from "./User/Infraestructura/user.routes";
 
 const routes = Router();
@@ -16,8 +17,8 @@ const routes = Router();
 *     '200':
 *       description: Ok
 */
-
-routes.use("/combos", combo);
+routes.use("/candy", candy);
+routes.use("/store", store);
 
 /**
  * @swagger

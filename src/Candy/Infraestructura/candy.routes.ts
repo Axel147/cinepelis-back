@@ -1,12 +1,12 @@
 import { Router } from "express";
-import { ComboController } from "./combo.controller";
+import { CandyController } from "./candy.controller";
 
 const router = Router();
 
-router.get("/", ComboController.getAll);
+router.get("/", CandyController.getAll);
 
 //router.get("/:title", ComboController.getByTitle);
 
-router.post("/", ComboController.addCombo);
+router.post("/", CandyController.addCandy);
 
 export default router;

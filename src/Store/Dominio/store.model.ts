@@ -1,10 +1,10 @@
 import mongoose, { Schema } from 'mongoose';
-import { ICombo } from './combo.interface';
+import { IStore } from './store.interface';
 
-const ComboSchema: Schema = new Schema({
+const StoreSchema: Schema = new Schema({
   contenido: { type: String, required: true },
   portada: { type: String, required: false },
   precio: { type: String, required: false },
 });
 
-export const Combo = mongoose.model<ICombo>('Combo', ComboSchema);
+export const Store = mongoose.model<IStore>('Store', StoreSchema);
