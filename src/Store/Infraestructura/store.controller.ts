@@ -15,10 +15,11 @@ export class StoreController {
     }
 
     static addStore = async (req: Request, res: Response) => {
-        const { contenido, portada, precio } = req.body;
+        const { titulo, contenido, portada, precio } = req.body;
         const storeRepository = new StoreRepository(Store);
         const store = new Store();
         try {
+            store.titulo = titulo,
             store.contenido = contenido,
             store.portada = portada,
             store.precio = precio

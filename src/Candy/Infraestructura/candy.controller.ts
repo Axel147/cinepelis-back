@@ -15,10 +15,11 @@ export class CandyController {
     }
 
     static addCandy = async (req: Request, res: Response) => {
-        const { contenido, portada, precio } = req.body;
+        const { titulo, contenido, portada, precio } = req.body;
         const candyRepository = new CandyRepository(Candy);
         const candy = new Candy();
         try {
+            candy.titulo = titulo,
             candy.contenido = contenido,
             candy.portada = portada,
             candy.precio = precio
