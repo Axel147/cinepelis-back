@@ -1,5 +1,5 @@
 import { Router } from "express";
-import movie from "./Movies/Infraestructura/movies.routes";
+// import movie from "./Movies/Infraestructura/movies.routes";
 import user from "./User/Infraestructura/user.routes";
 
 const routes = Router();
@@ -76,7 +76,7 @@ const routes = Router();
  *           type: object
  */
 
-routes.use("/movies", movie);
+// routes.use("/movies", movie);
 
 //-------------USER----------------------------
 
@@ -130,6 +130,6 @@ routes.use("/movies", movie);
  *           application/json:
  *           type: object
  */
-routes.use("/user", user);
+// routes.use("/user", user);
 
 export default routes;

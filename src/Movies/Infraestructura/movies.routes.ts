@@ -1,10 +1,10 @@
-import { Router } from "express";
-import { MovieController } from "./movies.controller";
+// import { Router } from "express";
+// import { MovieController } from "./movies.controller";
 
-const router = Router();
+// const router = Router();
 
-router.get("/", MovieController.getAll);
+// router.get("/", MovieController.getAll);
 
-router.post("/", MovieController.addMovie);
+// router.post("/", MovieController.addMovie);
 
-export default router;
+// export default router;
